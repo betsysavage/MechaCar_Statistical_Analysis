@@ -29,7 +29,9 @@ mpg = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.0688)spoiler_angle + (
 For this section of the analysis, we use a data set containing weight capacities of suspension coils across production lots. Comparing results across the lots will help gain insights into any inconsistencies in manufacturing processes across lots. In particular, the 
 
 Total summary:
+
 <img width="802" alt="image" src="https://user-images.githubusercontent.com/114873837/222852534-b4e36281-5b5c-4637-b817-28fde1791716.png">
+
 
 <img width="327" alt="image" src="https://user-images.githubusercontent.com/114873837/222851630-95c3883d-29f0-4683-9127-2c1d770a91b5.png">
 
