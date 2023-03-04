@@ -1,8 +1,9 @@
 # MechaCar_Statistical_Analysis
 
-## Purpose
+## Purpose:
 AutosRUs's new car prototype, MechaCar, is experiencing some production and manufacturing issues. The goal of the analysis is to run a variety of statistical tests on the production data to provide insights into comparisons between sample groups and potential determinants of vehicle performance. These insights will be provided to the company help the manufacturing team deliver on their goals to improve production. 
 
+## Results:
 ## Linear Regression to Predict MPG
 The heart of this analysis is to gain insights about production factors that may impact vehicle performance. The production csv file contains data on vehicle length, vehicle weight, spoiler angle, drivetrain, ground clearance, and miles per gallon test results for 50 prototype vehicles. To examine how each design specification variable may impact the vehicle performance, we can create a multiple linear regression model using mpg as the dependent variable of interest, and the remaining variables as independent variables. 
 
@@ -12,7 +13,7 @@ This linear regression model produces the following results for intercept and sl
 
 Converting these results into the standard y=mx+b format for a line, the model would appear as the following:
 
-**mpg = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.0688)spoiler_angle + (3.546)ground_clearance + (-3.411)AWD + (-104.0)
+**mpg = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.0688)spoiler_angle + (3.546)ground_clearance + (-3.411)AWD + (-104.0)**
 
 While we have the values of the coefficients and intercept populated in the model, in order to determine whether these production variables are statistically significant predictors of mpg test results, we need to examine the p-value and r-squared values.
 
@@ -22,8 +23,7 @@ While we have the values of the coefficients and intercept populated in the mode
 
 * When creating a regression model, the null hypothesis is set to assume that the slope of the model is zero, and the alternative hypothesis asserts that the slope of the model is not zero. In this model, the p-value is 5.35e-11, which is much lower than the statistical threshold of .05, and we can reject the null hypothesis that the slope is zero.  
 
-* Does this linear model predict mpg of MechaCar prototypes effectively?
-The R-squared value in the summary above is 0.7149. This means that 71.49% of predictions made when using this model will be correct. There may be additional production factors not included in our dataset that would be helpful to collect and include in the model to improve its "goodness of fit", but this r-squared value indicates that the model is strong.  
+* The R-squared value in the summary above is 0.7149. This means that 71.49% of predictions made when using this model will be correct. There may be additional production factors not included in our dataset that would be helpful to collect and include in the model to improve its "goodness of fit", but this r-squared value indicates that the model is strong enough to predict the mpg of MechaCar prototypes effectively.  
 
 ## Summary Statistics on Suspension Coils
 
