@@ -71,13 +71,14 @@ The results for lots 1 and 2 display p-values of 1 and 0.6, respectively. These 
 The previous analysis has helped us gain insight into variables affecting the MechaCar prototype's performance using data internal to AutosRUs. How might this prototype compare to car performance of similar models from other companies? Earlier in this analysis, we examined vehicle performance as measured by miles per gallon tests. Fuel efficiency of a car is of particular interest for customers who are concerned with rising gas prices or environmental impact. In order to quantify how the MechaCar performs agains its competition in its fuel efficiency performance, we can propose a new statistical study design.
 
 **Metric being tested**
-The proposed analysis would review the average miles per gallon for the vehicles.
+The proposed analysis would review the average miles per gallon for the competitive vehicle types.
 
-**Hypotheses to test** 
-Null hypothesis: The mean mpg of 
-Alternative hypothesis:
+**Hypotheses to test** (source: ANOVA Test section of module 16: https://courses.bootcampspot.com/courses/2566/pages/16-dot-6-5-use-the-anova-test?module_item_id=818854)
+Null hypothesis: The mean mpg of all companies are equal
+Alternative hypothesis: At least one of the means is different from other groups
 
 **What statistical test would you use to test the hypothesis?**
-A paired two-sample t-test
+While we could utilize a two-sample t-test similar to the structure above to compare mean mpgs across groups, it is likely that we would want to compare the MechaCar to more than one other company's model in order to fully understand the landscape of multiple competitors. To do so, we could execute a one-way ANOVA to test the means of the single dependent variable (mpg) across a single independent variable with multiple groups (competitor models). The dependent variable is numerical and continuous, and the independent variable is categorical, which fits the requirements for this type of model.
 
 **What data is needed to run the statistical test?**
+To complete the ANOVA test, we would require a data source that contains fuel efficiency metrics and the names/companies of the various models of vehicles.    
