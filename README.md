@@ -5,7 +5,7 @@ AutosRUs's new car prototype, MechaCar, is experiencing some production and manu
 
 ## Results:
 ## Linear Regression to Predict MPG
-The heart of this analysis is to gain insights about production factors that may impact vehicle performance. The production csv file contains data on vehicle length, vehicle weight, spoiler angle, drivetrain, ground clearance, and miles per gallon test results for 50 prototype vehicles. To examine how each design specification variable may impact the vehicle performance, we can create a multiple linear regression model using mpg as the dependent variable of interest, and the remaining variables as independent variables. 
+The goal of this analysis is to gain insights about production factors that may impact vehicle performance. The production csv file contains data on vehicle length, vehicle weight, spoiler angle, drivetrain, ground clearance, and miles per gallon test results for 50 prototype vehicles. To examine how each design specification variable may impact the vehicle performance, we can create a multiple linear regression model using mpg as the dependent variable of interest, and the remaining variables as independent variables. 
 
 This linear regression model produces the following results for intercept and slope coefficient.
 
@@ -27,23 +27,25 @@ While we have the values of the coefficients and intercept populated in the mode
 
 ## Summary Statistics on Suspension Coils
 
-For this section of the analysis, we use a data set containing weight capacities of suspension coils across production lots. Comparing results for coil weight capacities across the lots will help gain insights into any inconsistencies in manufacturing processes across lots. The variable of interest for this section is the PSI (pounds per square inch). In running summary tables on the PSI variable, we achieve the following results. 
+For this section of the analysis, we review a data set containing weight capacities of suspension coils (measured in pounds per square inch) created by various manufacturing lots. Comparing summary descriptive statistics for PSI measures across the lots will help gain insights into any inconsistencies in the manufacturing processes that may result in variance in weight capacities for coils between the groups.
 
-Total summary: The code and resulting table summarizes the descriptive statistics of the PSI for the total coils manufactured.
+**Total summary:** 
+The R code and resulting table summarizes the descriptive statistics of the PSI for the **total coils manufactured**.
 
 <img width="802" alt="image" src="https://user-images.githubusercontent.com/114873837/222852534-b4e36281-5b5c-4637-b817-28fde1791716.png">
 
 
 <img width="327" alt="image" src="https://user-images.githubusercontent.com/114873837/222851630-95c3883d-29f0-4683-9127-2c1d770a91b5.png">
 
-Lot summary: The code and resulting table summarizes the descriptive statistics of the PSI for each manufacturing lot.
+**Lot summary:** 
+The R code and resulting table summarizes the descriptive statistics of the PSI for **each of the three manufacturing lots**.
 <img width="1165" alt="image" src="https://user-images.githubusercontent.com/114873837/222853689-8ea6fc44-fde6-4db5-904f-b68a1f26ba85.png">
 
 <img width="469" alt="image" src="https://user-images.githubusercontent.com/114873837/222851708-e8281a64-b077-4f59-9512-4c8fb7c80317.png">
  
+We are provided with information that the design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. While the overall PSI variance of the total population of observations is 62.29, which is within the 100 threshold, Lot 3 has a large variance of 170.28, which indicates a wide spread within the data. It is possible that there are some outliers in the data set that are impacting the variance results, but Manufacturing Lot 3 must be examined further to improve their adherence to the design and safety standards of suspension coils.
 
 ## T Tests on Suspension Coils
-We are provided with information that the design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. In order to determine whether manufacturing lots are meeting this safety threshold, we examine the variance and standard deviation of the PSI measures for the group as a whole as well as broken down by each lot.
 
 <img width="495" alt="image" src="https://user-images.githubusercontent.com/114873837/222870632-4ca34862-75de-4c87-a882-f92e2da872d5.png">
 
