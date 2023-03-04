@@ -1,28 +1,31 @@
 # MechaCar_Statistical_Analysis
 
 ## Purpose
-The new car prototype, MechaCar, from the Autos R Us company is having issues in production that are impacting the manufacturing department. The goal of the analysis is to run a variety of statistical tests on the production data to provide insights into comparisons between sample groups and potential determinants of vehicle performance. These insights will be provided to the company to improve production and help the manufacturing department deliver on goals. 
+AutosRUs's new car prototype, MechaCar, is experiencing some production and manufacturing issues. The goal of the analysis is to run a variety of statistical tests on the production data to provide insights into comparisons between sample groups and potential determinants of vehicle performance. These insights will be provided to the company help the manufacturing team deliver on their goals to improve production. 
 
 ## Linear Regression to Predict MPG
-The heart of this analysis is to draw conclusions about production factors that may impact vehicle performance.
+The heart of this analysis is to gain insights about production factors that may impact vehicle performance. The production csv file contains data on vehicle length, vehicle weight, spoiler angle, drivetrain, ground clearance, and miles per gallon test results for 50 prototype vehicles. To examine how each design specification variable may impact the vehicle performance, we can create a multiple linear regression model using mpg as the dependent variable of interest, and the remaining variables as independent variables. 
 
+This linear regression model produces the following results for intercept and slope coefficient.
 
-The linear regression code produces the following model: 
+<img width="786" alt="image" src="https://user-images.githubusercontent.com/114873837/222917814-a38e468f-f8b9-4fcd-af59-61186ca0a06d.png">
+
+Converting these results into the standard y=mx+b format for a line, the model would appear as the following:
 
 mpg = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.0688)spoiler_angle + (3.546)ground_clearance + (-3.411)AWD + (-104.0)
 
+In order to determine whether these production variables are statistically significant predictors of 
+
 <img width="869" alt="image" src="https://user-images.githubusercontent.com/114873837/222850177-02aeb0c4-67d9-45e5-8749-73790368b552.png">
-
-
-* Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
-
 
 * Is the slope of the linear model considered to be zero? Why or why not?
 
 
+* Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+According to the results above, the vehicle length and ground clearance each have p values much lower than the .05 standard. 
+
 * Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
-
-
+The R-squared value in the summary above is 0.7149. This means that 71.49% of predictions made when using this model will be correct. While there may be additional production factors that would be helpful to include in the model to improve its "goodness of fit", this r-squared value indicates that the model is strong.  
 
 ## Summary Statistics on Suspension Coils
 
