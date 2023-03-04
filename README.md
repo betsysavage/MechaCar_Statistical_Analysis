@@ -3,10 +3,10 @@
 ## Purpose:
 AutosRUs's new car prototype, MechaCar, is experiencing some production and manufacturing issues. The goal of the analysis is to run a variety of statistical tests on the production data to provide insights into comparisons between sample groups and potential determinants of vehicle performance. These insights will be provided to the company help the manufacturing team deliver on their goals to improve production. 
 
-## Results:
 ## Linear Regression to Predict MPG
 The goal of this analysis is to gain insights about production factors that may impact vehicle performance. The production csv file contains data on vehicle length, vehicle weight, spoiler angle, drivetrain, ground clearance, and miles per gallon test results for 50 prototype vehicles. To examine how each design specification variable may impact the vehicle performance, we can create a multiple linear regression model using mpg as the dependent variable of interest, and the remaining variables as independent variables. 
 
+### Results:
 This linear regression model produces the following results for intercept and slope coefficient.
 
 <img width="786" alt="image" src="https://user-images.githubusercontent.com/114873837/222917814-a38e468f-f8b9-4fcd-af59-61186ca0a06d.png">
@@ -29,6 +29,8 @@ While we have the values of the coefficients and intercept populated in the mode
 
 For this section of the analysis, we review a data set containing weight capacities of suspension coils (measured in pounds per square inch) created by various manufacturing lots. Comparing summary descriptive statistics for PSI measures across the lots will help gain insights into any inconsistencies in the manufacturing processes that may result in variance in weight capacities for coils between the groups.
 
+### Results
+
 **Total summary:** 
 The R code and resulting table summarizes the descriptive statistics of the PSI for the **total coils manufactured**.
 
@@ -47,18 +49,26 @@ We are provided with information that the design specifications for the MechaCar
 
 ## T Tests on Suspension Coils
 
+From the summary statistics above, the mean values of PSI measures for coils made at each manufacturing lot appear to range between 1496.14 (Lot 3) and 1500.2 (Lot 2). It is possible that these mean values were simply observed by chance, and there is no statistically difference in means between the sample group populations and the total group population. To help us gain insight into whether the observed difference in mean values is statistically significant, we perform a two-tailed one-sample t-test.
+
+### Results
+
+The initial t-test compares the overall group suspension coil PSI mean to a true population mean of 1500 PSI.  
 <img width="495" alt="image" src="https://user-images.githubusercontent.com/114873837/222870632-4ca34862-75de-4c87-a882-f92e2da872d5.png">
 
 <img width="439" alt="image" src="https://user-images.githubusercontent.com/114873837/222870701-1e746d92-59a4-4b9d-aad0-1a6feb7b463b.png">
+Because the p-value is 0.06, we fail to reject the null hypothesis that the true mean of the group is the same as the true population mean of 1500 PSI.
+
+The next t-tests compare the suspension coil measures of each manufacturing lot to a true population mean of 1500 PSI. 
 
 <img width="870" alt="image" src="https://user-images.githubusercontent.com/114873837/222870732-cbc3f2dc-4fdb-4fd2-be13-a43858536547.png">
 
 <img width="611" alt="image" src="https://user-images.githubusercontent.com/114873837/222870762-a2116162-80f7-4523-97be-55c2ae95c817.png">
-
+The results for lots 1 and 2 display p-values of 1 and 0.6, respectively. These numbers are both higher than the typical threshold of 0.5, meaning that we cannot reject the null hypothesis that the true mean of these groups is 1500. The result for lot 3, however, displays a p-value of 0.0417 - In this case, we can reject the null hypothesis in favor of the alternative hypothesis that the true mean of the group is not equal to 1500. It is not likely that the observed relationship is due to chance - Lot 3 seems to produce suspension coils that have lower PSI weights on average. It would be worthwhile to examine manufacturing processes at this lot to determine how it deviates from the normal standards in producing coils.  
 
 ## Study Design: MechaCar vs Competition
 
-Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
+The previous analysis has helped us gain insight into variables affecting the MechaCar prototype's performance. How does this prototype compare to car performance of similar models from other companies? Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
 
 In your description, address the following questions:
 
