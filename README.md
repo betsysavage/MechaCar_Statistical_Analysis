@@ -12,20 +12,18 @@ This linear regression model produces the following results for intercept and sl
 
 Converting these results into the standard y=mx+b format for a line, the model would appear as the following:
 
-mpg = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.0688)spoiler_angle + (3.546)ground_clearance + (-3.411)AWD + (-104.0)
+**mpg = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.0688)spoiler_angle + (3.546)ground_clearance + (-3.411)AWD + (-104.0)
 
-In order to determine whether these production variables are statistically significant predictors of 
+While we have the values of the coefficients and intercept populated in the model, in order to determine whether these production variables are statistically significant predictors of mpg test results, we need to examine the p-value and r-squared values.
 
 <img width="869" alt="image" src="https://user-images.githubusercontent.com/114873837/222850177-02aeb0c4-67d9-45e5-8749-73790368b552.png">
 
-* Is the slope of the linear model considered to be zero? Why or why not?
+* According to the results above, the variables of **vehicle length** and **ground clearance** each have p values much lower than the .05 standard to reject that the relationship between the data points and mpg occurred by chance. The intercept value is also statistically significant under the 0.05 threshold.   
 
+* When creating a regression model, the null hypothesis is set to assume that the slope of the model is zero, and the alternative hypothesis asserts that the slope of the model is not zero. In this model, the p-value is 5.35e-11, which is much lower than the statistical threshold of .05, and we can reject the null hypothesis that the slope is zero.  
 
-* Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
-According to the results above, the vehicle length and ground clearance each have p values much lower than the .05 standard. 
-
-* Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
-The R-squared value in the summary above is 0.7149. This means that 71.49% of predictions made when using this model will be correct. While there may be additional production factors that would be helpful to include in the model to improve its "goodness of fit", this r-squared value indicates that the model is strong.  
+* Does this linear model predict mpg of MechaCar prototypes effectively?
+The R-squared value in the summary above is 0.7149. This means that 71.49% of predictions made when using this model will be correct. There may be additional production factors not included in our dataset that would be helpful to collect and include in the model to improve its "goodness of fit", but this r-squared value indicates that the model is strong.  
 
 ## Summary Statistics on Suspension Coils
 
