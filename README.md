@@ -68,14 +68,16 @@ The results for lots 1 and 2 display p-values of 1 and 0.6, respectively. These 
 
 ## Study Design: MechaCar vs Competition
 
-The previous analysis has helped us gain insight into variables affecting the MechaCar prototype's performance. How does this prototype compare to car performance of similar models from other companies? Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
+The previous analysis has helped us gain insight into variables affecting the MechaCar prototype's performance using data internal to AutosRUs. How might this prototype compare to car performance of similar models from other companies? Earlier in this analysis, we examined vehicle performance as measured by miles per gallon tests. Fuel efficiency of a car is of particular interest for customers who are concerned with rising gas prices or environmental impact. In order to quantify how the MechaCar performs agains its competition in its fuel efficiency performance, we can propose a new statistical study design.
 
-In your description, address the following questions:
+**Metric being tested**
+The proposed analysis would review the average miles per gallon for the vehicles.
 
-What metric or metrics are you going to test?
+**Hypotheses to test** 
+Null hypothesis: The mean mpg of 
+Alternative hypothesis:
 
-What is the null hypothesis or alternative hypothesis?
+**What statistical test would you use to test the hypothesis?**
+A paired two-sample t-test
 
-What statistical test would you use to test the hypothesis? And why?
-
-What data is needed to run the statistical test?
+**What data is needed to run the statistical test?**
